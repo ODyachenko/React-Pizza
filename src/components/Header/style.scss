@@ -1,0 +1,131 @@
+.header {
+  text-align: center;
+  border-bottom: 1px solid #f6f6f6;
+  padding: 20px 0;
+
+  &__search {
+    display: block;
+    max-width: 200px;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0 10px;
+    margin: 0 auto 20px;
+
+    &--ico {
+      display: none;
+    }
+    &--field {
+      all: unset;
+      // display: block;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: 15px;
+      padding: 12px 10px 12px 5px;
+    }
+    &--clear {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+    }
+  }
+
+  &__cart {
+    display: inline-block;
+    font-weight: 700;
+    color: #fff;
+    background: #fe5f1e;
+    border-radius: 30px;
+    padding: 15px 20px;
+    margin: 0 auto;
+
+    & span {
+      vertical-align: middle;
+    }
+    & img {
+      display: inline;
+      vertical-align: inherit;
+    }
+
+    &-price {
+      border-right: 1px solid rgba(255, 255, 255, 0.25);
+      padding-right: 13px;
+      margin-right: 13px;
+    }
+    &-number {
+      & img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-bottom: 20px;
+
+  &__logo {
+    margin-right: 17px;
+  }
+  &__name {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 900;
+  }
+  &__slogan {
+    color: #7b7b7b;
+  }
+}
+@media (min-width: 480px) {
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &__search {
+      margin: 0 20px 0 0;
+    }
+
+    &__cart {
+      margin: 0;
+    }
+  }
+  .brand {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 40px 0;
+
+    &__search {
+      margin: 0;
+    }
+  }
+  .brand {
+    width: auto;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    &__search {
+      max-width: 250px;
+
+      &--ico {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        opacity: 0.7;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import './assets/scss/fonts.scss';
+@import './assets/scss/normalize.scss';
+@import './assets/scss/variables.scss';
+
+.bold {
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: $primary-black;
+  background: #ffdf8c;
+}
+
+.container {
+  width: 100%;
+  max-width: 1340px;
+  background: #fff;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.btn {
+  all: unset;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.not-found {
+  padding: 100px 0;
+
+  &__code {
+    display: block;
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__title {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@media (min-width: 480px) {
+  .btn {
+    font-size: 16px;
+    padding: 20px 25px;
+  }
+}
+@media (min-width: 640px) {
+  body {
+    padding: 15px;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    padding: 25px;
+  }
+  .container {
+    padding: 0 25px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    padding: 45px;
+  }
+  .container {
+    padding: 0 40px;
+  }
+}

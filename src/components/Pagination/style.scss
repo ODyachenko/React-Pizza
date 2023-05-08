@@ -1,0 +1,28 @@
+.main__pagination {
+  display: flex;
+  max-width: 250px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  margin: 0 auto;
+
+  & li {
+    & a {
+      display: block;
+      font-weight: 700;
+      background: #f3f3f3;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 15px 17px;
+    }
+    & a:hover {
+      background: rgba(170, 170, 170, 0.46);
+    }
+    &.selected a {
+      color: #fff;
+      background: #282828;
+    }
+  }
+}

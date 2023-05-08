@@ -1,0 +1,118 @@
+.categories {
+  text-align: center;
+  margin-bottom: 30px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    margin-bottom: 10px;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    /* ie 10+ */
+    & {
+      -ms-overflow-style: none;
+    }
+
+    &-item {
+      font-weight: 700;
+      background: #f9f9f9;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 15px 17px;
+
+      &:hover {
+        background: rgba(170, 170, 170, 0.46);
+      }
+      &.active {
+        color: #fff;
+        background: #282828;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.sorting {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+
+  &--type {
+    font-weight: 400;
+    color: #fe5f1e;
+    border-bottom: 1px dashed #fe5f1e;
+    cursor: pointer;
+  }
+  & svg {
+    margin-right: 5px;
+  }
+
+  &__popup {
+    max-width: 140px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px 0;
+    margin-left: auto;
+
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    z-index: 100;
+
+    & li {
+      cursor: pointer;
+      padding: 10px 15px;
+
+      &:hover {
+        background: rgba(254, 95, 30, 0.05);
+      }
+
+      &.active {
+        font-weight: 700;
+        color: #fe5f1e;
+        background: rgba(254, 95, 30, 0.05);
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .categories {
+    &__list {
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+
+    &__list {
+      justify-content: flex-start;
+      overflow: visible;
+      margin: 0;
+    }
+  }
+}
+@media (min-width: 1220px) {
+  .categories {
+    &__list {
+      &-item {
+        padding: 15px 20px;
+      }
+    }
+  }
+}
